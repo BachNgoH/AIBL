@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aibl"
+version = "0.1.0"
+description = "Ownership-aware layout attention and amodal instance-balanced loss for FLUX.2"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "AIBL contributors"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["image generation", "layout conditioning", "counting", "occlusion", "diffusion"]
+dependencies = [
+    "torch>=2.6.0",
+    "diffusers>=0.38.0,<0.39",
+    "transformers>=4.57.0,<6",
+    "peft>=0.18.0,<0.20",
+    "safetensors>=0.4.0",
+    "numpy>=1.24.0",
+    "pillow>=9.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2.0", "wheel>=0.43.0", "ruff>=0.9.0"]
+
+[project.scripts]
+aibl-train = "aibl.cli:train"
+aibl-infer = "aibl.cli:infer"
+aibl-eval = "aibl.cli:evaluate"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["aibl*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"

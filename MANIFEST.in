@@ -1,0 +1,11 @@
+include README.md LICENSE pyproject.toml requirements.txt .gitignore MANIFEST.in
+recursive-include src/aibl *.py
+recursive-include scripts *.py
+recursive-include tests test_*.py
+recursive-include assets/figures *.png *.pdf
+prune .git
+prune dist
+prune build
+prune outputs
+prune data
+global-exclude *.py[cod] .DS_Store .env .env.*
