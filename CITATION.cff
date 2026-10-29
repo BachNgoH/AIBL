@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 title: Learning to Generate Multiple Objects from Dense and Occluded Layouts
 message: >-
-  If you use this software, please cite the NeurIPS 2026 paper as below.
+  If you use this software, please cite the arXiv preprint as below. The
+  NeurIPS 2026 proceedings are not published yet.
 type: software
 authors:
   - given-names: Bach-Hoang
@@ -16,10 +17,28 @@ repository-code: https://github.com/BachNgoH/AIBL
 url: https://bachngoh.github.io/AIBL/
 license: MIT
 version: 0.1.0
-date-released: '2026-09-01'
+date-released: '2026-10-29'
 keywords:
   - diffusion models
   - image generation
   - layout conditioning
   - object counting
   - occlusion
+preferred-citation:
+  type: article
+  title: Learning to Generate Multiple Objects from Dense and Occluded Layouts
+  authors:
+    - given-names: Bach-Hoang
+      family-names: Ngo
+    - given-names: Si-Tri
+      family-names: Ngo
+    - given-names: Hieu
+      family-names: Le
+    - given-names: Trung-Nghia
+      family-names: Le
+  journal: arXiv preprint arXiv:2607.03488
+  year: 2026
+  archiveprefix: arXiv
+  primaryclass: cs.CV
+  eprint: '2607.03488'
+  url: https://arxiv.org/abs/2607.03488

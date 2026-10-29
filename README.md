@@ -15,10 +15,11 @@
 
 ## 📢 News
 
+- **Oct 29, 2026** — Official code release: training, inference, and counting evaluation for AIBL.
 - **Sep 2026** — 🎉 **AIBL is accepted at NeurIPS 2026.** Thank you to everyone who supported the work.
-- **Aug 2026** — Official code release: training, inference, and counting evaluation for AIBL.
 - **Jul 2026** — arXiv preprint ([arXiv:2607.03488](https://arxiv.org/abs/2607.03488)) and project page released.
 
+> The NeurIPS 2026 proceedings are not published yet, so please cite the arXiv preprint below.
 > The OverlapDepth dataset is not yet public. Access instructions will be added to this repository when the release is ready.
 
 ## Overview
@@ -161,19 +162,7 @@ Accuracies are fractions in `[0,1]`. Include every evaluated target pair, includ
 
 ## Citation
 
-If you find this work useful, please cite the NeurIPS 2026 paper:
-
-```bibtex
-@inproceedings{ngo2026aibl,
-  title         = {Learning to Generate Multiple Objects from Dense and Occluded Layouts},
-  author        = {Ngo, Bach-Hoang and Ngo, Si-Tri and Le, Hieu and Le, Trung-Nghia},
-  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
-  year          = {2026},
-  url           = {https://arxiv.org/abs/2607.03488}
-}
-```
-
-Or the arXiv preprint:
+If you find this work useful, please cite the arXiv preprint:
 
 ```bibtex
 @misc{ngo2026aibl,
@@ -186,6 +175,8 @@ Or the arXiv preprint:
   url           = {https://arxiv.org/abs/2607.03488}
 }
 ```
+
+The NeurIPS 2026 proceedings are not published yet; this entry will be updated to the official proceedings once they are available.
 
 ## License
 
