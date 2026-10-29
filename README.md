@@ -6,21 +6,23 @@
 
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS%202026-accepted-8a2be2.svg)](https://bachngoh.github.io/AIBL/)
 [![arXiv](https://img.shields.io/badge/arXiv-2607.03488-b31b1bb.svg)](https://arxiv.org/abs/2607.03488)
+[![Dataset](https://img.shields.io/badge/dataset-Hugging%20Face-ffcc4d.svg)](https://huggingface.co/datasets/BachNgoH/OverlapDepth-45K)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](pyproject.toml)
 
-[Project Page](https://bachngoh.github.io/AIBL/) · [arXiv](https://arxiv.org/abs/2607.03488) · [Code](https://github.com/BachNgoH/AIBL) · [Issues](https://github.com/BachNgoH/AIBL/issues)
+[Project Page](https://bachngoh.github.io/AIBL/) · [arXiv](https://arxiv.org/abs/2607.03488) · [Code](https://github.com/BachNgoH/AIBL) · [Dataset](https://huggingface.co/datasets/BachNgoH/OverlapDepth-45K) · [Issues](https://github.com/BachNgoH/AIBL/issues)
 
 </div>
 
 ## 📢 News
 
 - **Oct 29, 2026** — Official code release: training, inference, and counting evaluation for AIBL.
+- **Oct 29, 2026** — OverlapDepth-45K dataset page created on Hugging Face. The data is not released yet — the link is a placeholder for now.
 - **Sep 2026** — 🎉 **AIBL is accepted at NeurIPS 2026.** Thank you to everyone who supported the work.
 - **Jul 2026** — arXiv preprint ([arXiv:2607.03488](https://arxiv.org/abs/2607.03488)) and project page released.
 
 > The NeurIPS 2026 proceedings are not published yet, so please cite the arXiv preprint below.
-> The OverlapDepth dataset is not yet public. Access instructions will be added to this repository when the release is ready.
+> The OverlapDepth-45K dataset is not released yet. The Hugging Face link below points to a placeholder repository until the samples are uploaded.
 
 ## Overview
 
@@ -55,6 +57,16 @@ python -m pip install -e .
 Training and image generation require access to `black-forest-labs/FLUX.2-klein-base-4B`, sufficient accelerator memory, and its supported Diffusers implementation. Set `HF_TOKEN` in your environment if model access requires it. Weights and datasets are separate downloads; no pretrained AIBL checkpoint is bundled. CPU checks of the mathematical components do not require downloading a model.
 
 ## Data
+
+The dataset is hosted on Hugging Face: [`BachNgoH/OverlapDepth-45K`](https://huggingface.co/datasets/BachNgoH/OverlapDepth-45K).
+
+> **Placeholder — not released yet.** The samples are still being prepared. The link above is live, but the repository is currently empty; it will be populated with the actual data before the release.
+
+Once the data is available, download it with the Hugging Face CLI and point `--data_root` at the extracted directory:
+
+```bash
+huggingface-cli download BachNgoH/OverlapDepth-45K --repo-type dataset --local-dir data/overlapdepth
+```
 
 Prepare a verified dataset root:
 
