@@ -17,12 +17,9 @@
 ## 📢 News
 
 - **Oct 29, 2026** — Official code release: training, inference, and counting evaluation for AIBL.
-- **Oct 29, 2026** — OverlapDepth-45K dataset page created on Hugging Face. The data is not released yet — the link is a placeholder for now.
+- **Oct 29, 2026** — OverlapDepth-45K dataset page on Hugging Face: [`BachNgoH/OverlapDepth-45K`](https://huggingface.co/datasets/BachNgoH/OverlapDepth-45K).
 - **Sep 2026** — 🎉 **AIBL is accepted at NeurIPS 2026.** Thank you to everyone who supported the work.
 - **Jul 2026** — arXiv preprint ([arXiv:2607.03488](https://arxiv.org/abs/2607.03488)) and project page released.
-
-> The NeurIPS 2026 proceedings are not published yet, so please cite the arXiv preprint below.
-> The OverlapDepth-45K dataset is not released yet. The Hugging Face link below points to a placeholder repository until the samples are uploaded.
 
 ## Overview
 
@@ -60,9 +57,7 @@ Training and image generation require access to `black-forest-labs/FLUX.2-klein-
 
 The dataset is hosted on Hugging Face: [`BachNgoH/OverlapDepth-45K`](https://huggingface.co/datasets/BachNgoH/OverlapDepth-45K).
 
-> **Placeholder — not released yet.** The samples are still being prepared. The link above is live, but the repository is currently empty; it will be populated with the actual data before the release.
-
-Once the data is available, download it with the Hugging Face CLI and point `--data_root` at the extracted directory:
+Download it with the Hugging Face CLI and point `--data_root` at the downloaded directory:
 
 ```bash
 huggingface-cli download BachNgoH/OverlapDepth-45K --repo-type dataset --local-dir data/overlapdepth
