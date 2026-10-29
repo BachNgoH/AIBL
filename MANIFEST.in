@@ -1,4 +1,4 @@
-include README.md LICENSE pyproject.toml requirements.txt .gitignore MANIFEST.in
+include README.md LICENSE CITATION.cff pyproject.toml requirements.txt .gitignore MANIFEST.in
 recursive-include src/aibl *.py
 recursive-include scripts *.py
 recursive-include tests test_*.py

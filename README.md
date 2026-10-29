@@ -1,6 +1,31 @@
+<div align="center">
+
 # Learning to Generate Multiple Objects from Dense and Occluded Layouts
 
+**AIBL — Ownership-Aware Layout Attention + Amodal-Aware Instance-Balanced Loss**
+
+[![NeurIPS 2026](https://img.shields.io/badge/NeurIPS%202026-accepted-8a2be2.svg)](https://bachngoh.github.io/AIBL/)
+[![arXiv](https://img.shields.io/badge/arXiv-2607.03488-b31b1bb.svg)](https://arxiv.org/abs/2607.03488)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](pyproject.toml)
+
+[Project Page](https://bachngoh.github.io/AIBL/) · [arXiv](https://arxiv.org/abs/2607.03488) · [Code](https://github.com/BachNgoH/AIBL) · [Issues](https://github.com/BachNgoH/AIBL/issues)
+
+</div>
+
+## 📢 News
+
+- **Sep 2026** — 🎉 **AIBL is accepted at NeurIPS 2026.** Thank you to everyone who supported the work.
+- **Aug 2026** — Official code release: training, inference, and counting evaluation for AIBL.
+- **Jul 2026** — arXiv preprint ([arXiv:2607.03488](https://arxiv.org/abs/2607.03488)) and project page released.
+
+> The OverlapDepth dataset is not yet public. Access instructions will be added to this repository when the release is ready.
+
+## Overview
+
 Official implementation of **Learning to Generate Multiple Objects from Dense and Occluded Layouts**. The method combines **Ownership-Aware Layout Attention (LA)** with **Amodal-Aware Instance-Balanced Loss (AIBL)**, fine-tuning FLUX.2-Klein using LoRA on **OverlapDepth-45K**.
+
+Text-to-image diffusion models often fail to produce the requested number of objects in dense scenes: overlapping instances collapse into merged structures, and heavily occluded objects receive weak training signal because only small visible regions contribute to the loss. AIBL addresses both — ownership-aware attention biases reduce cross-instance feature leakage, while the amodal-aware instance-balanced loss increases supervision for occluded objects according to their amodal-to-visible area ratio.
 
 ![Count-preserving generation across increasing scene density](assets/figures/teaser.png)
 
@@ -133,3 +158,39 @@ aibl-eval --input counts.json --output metrics.json
 ```
 
 Accuracies are fractions in `[0,1]`. Include every evaluated target pair, including zero detections. Detector/model revisions, thresholds, category normalization, layouts and sampled IDs must be frozen before comparing methods. This release scores count records; it does not bundle the detector or human evaluation pipeline.
+
+## Citation
+
+If you find this work useful, please cite the NeurIPS 2026 paper:
+
+```bibtex
+@inproceedings{ngo2026aibl,
+  title         = {Learning to Generate Multiple Objects from Dense and Occluded Layouts},
+  author        = {Ngo, Bach-Hoang and Ngo, Si-Tri and Le, Hieu and Le, Trung-Nghia},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2607.03488}
+}
+```
+
+Or the arXiv preprint:
+
+```bibtex
+@misc{ngo2026aibl,
+  title         = {Learning to Generate Multiple Objects from Dense and Occluded Layouts},
+  author        = {Ngo, Bach-Hoang and Ngo, Si-Tri and Le, Hieu and Le, Trung-Nghia},
+  year          = {2026},
+  archivePrefix = {arXiv},
+  eprint        = {2607.03488},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2607.03488}
+}
+```
+
+## License
+
+This repository is released under the [MIT License](LICENSE). Code, figures, and documentation are provided for research use; please cite the paper above when you build on this work.
+
+## Acknowledgements
+
+We thank our co-authors and advisors, and the NeurIPS 2026 reviewers for their feedback. Please open an issue for questions, bugs, or feature requests.
